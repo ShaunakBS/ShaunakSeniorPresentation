@@ -38,21 +38,13 @@ export function ServiceLearningSlide() {
         </div>
         <div className="flex flex-col">
           <AnimatedSection delay={0.15}>
-            <Label className="mb-3">My responsibilities</Label>
+            <Label className="mb-3">What I did at a home meet</Label>
             <ul className="m-0 list-none p-0">
               {serviceContent.duties.map((d) => (
-                <li key={d} className="flex items-baseline gap-5 border-t border-line py-[13px] text-[34px]">
+                <li key={d} className="flex items-baseline gap-5 border-t border-line py-[26px] text-[38px]">
                   <span className="h-[10px] w-[10px] shrink-0 -translate-y-[4px] rounded-full bg-accent" aria-hidden />
                   {d}
                 </li>
-              ))}
-            </ul>
-          </AnimatedSection>
-          <AnimatedSection delay={0.3} className="mt-[26px]">
-            <Label className="mb-3">Skills</Label>
-            <ul className="m-0 flex list-none flex-wrap gap-3 p-0">
-              {serviceContent.skills.map((s) => (
-                <li key={s} className="rounded-full bg-accent px-[24px] py-[8px] text-[26px] font-medium text-white">{s}</li>
               ))}
             </ul>
           </AnimatedSection>

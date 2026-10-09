@@ -290,7 +290,7 @@ await page.goto(base + '#/slide/9'); await page.reload(); await page.waitForTime
 const e3 = await text();
 check('Experience: "District Website Intern"', e3.includes('District Website Intern'));
 check('Experience: 6,000+ students', e3.includes('6,000+ students'));
-check('Experience: maintain/update, additions, communications specialist', e3.includes('Maintain and update the district website') && e3.includes('Develop additions and improvements to existing pages') && e3.includes('Work with the district communications specialist'));
+check('Experience: maintain/update, additions, communications specialist', e3.includes('Maintain and update the district website') && e3.includes('Make additions and improvements to existing pages') && e3.includes('Work with the district communications specialist'));
 
 // All requests for images succeeded (no 404s)
 check('no failed or 404 requests during image tests', failedReqs.length === 0, failedReqs.join(' | '));

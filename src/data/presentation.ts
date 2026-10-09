@@ -39,7 +39,7 @@ export const aboutContent = {
     { grades: '7th–8th Grade', school: 'Middle School East', place: '' },
     { grades: '9th–12th Grade', school: 'Boyertown Area Senior High School', place: '' },
   ],
-  familyAndFriends: 'Family and friends have been part of every stage of this timeline.',
+  familyAndFriends: 'Some of my family and friends.',
   activitiesTitle: 'Activities and Interests',
   activities: [
     'Technology Student Association (TSA)',
@@ -65,16 +65,16 @@ export const resumeContent = {
   image: 'resume/resume.png',
   highlights: [
     { title: 'Technical experience', text: 'District Website Intern, Boyertown Area School District' },
-    { title: 'Professional work', text: 'District Website Intern and YMCA lifeguard / swim instructor' },
-    { title: 'Leadership', text: 'DECA, Student Advisory Board, Strategic Planning' },
+    { title: 'Professional work', text: 'YMCA lifeguard and swim instructor' },
+    { title: 'Leadership', text: 'DECA, Student Advisory Board, Strategic Planning Committee' },
     { title: 'Engineering projects', text: 'Titration System (SAPT) and Assistive Clothing Tool' },
   ],
 };
 
 export const ninthContent = {
   smartFutures: [
-    { name: 'Think Like an Entrepreneur', note: 'Introduced business and entrepreneurial thinking' },
-    { name: 'Dive Into Career Clusters', note: 'Introduced career exploration' },
+    { name: 'Think Like an Entrepreneur', note: 'First look at business and entrepreneurship' },
+    { name: 'Dive Into Career Clusters', note: 'Looked at different career clusters' },
   ],
   essayTopic: 'Studying law at the University of Toronto',
   essaySeal: { image: 'seal-toronto', alt: 'Seal of the University of Toronto', label: 'University of Toronto Seal' },
@@ -87,15 +87,15 @@ export const ninthContent = {
     'Campus life',
   ],
   reflection:
-    'My interests have changed since ninth grade, but the essay was my first serious research into a career and college.',
+    'My plans have changed since then, but this was my first real research into a college and a career.',
 };
 
 export const tenthContent = {
   activities: [
-    { name: 'Using Email', skill: 'Professional communication', note: 'Writing clear, professional email' },
-    { name: 'Create a Personal Budget', skill: 'Financial planning', note: 'Planning how money is earned and spent' },
+    { name: 'Using Email', skill: 'Professional communication', note: '' },
+    { name: 'Create a Personal Budget', skill: 'Financial planning', note: '' },
   ],
-  connection: 'Everyday skills that apply to business and finance.',
+  connection: 'Both come up in business and finance.',
 };
 
 export const serviceContent = {
@@ -112,23 +112,22 @@ export const serviceContent = {
   duties: [
     'Worked the gift stand',
     'Handled floor music',
-    'Assisted with event setup',
-    'Assisted with cleanup',
-    'Helped support operations at the meet',
+    'Helped with setup',
+    'Helped with cleanup',
   ],
   skills: ['Teamwork', 'Communication', 'Organization', 'Responsibility'],
   // CONFIRM: reflection wording below is a draft for the presenter to verify or edit.
   reflection:
-    'I saw how much coordination happens behind the scenes at an event. Different responsibilities have to be handled for it to run smoothly.',
+    'A meet takes more work behind the scenes than most people see. Someone has to run the music, the gift stand, and the setup.',
 };
 
 export const everfiContent = {
   topics: [
-    { name: 'Taxes', note: 'Not my favorite topic, but useful to understand' },
-    { name: 'Savings accounts', note: 'How saving works' },
-    { name: 'Checking accounts', note: 'Everyday money management' },
+    { name: 'Taxes', note: 'Not my favorite, but worth knowing' },
+    { name: 'Savings accounts', note: '' },
+    { name: 'Checking accounts', note: '' },
   ],
-  why: 'Practical topics, especially since I want to study finance.',
+  why: 'I want to study finance, so these are worth knowing.',
 };
 
 export const jobShadowContent = {
@@ -137,11 +136,10 @@ export const jobShadowContent = {
   profession: 'Accountant',
   // General connection only. This is NOT a description of what the presenter personally observed.
   generalConnection: [
-    { title: 'Financial records', text: 'Tracking where money comes from and goes.' },
-    { title: 'Reporting', text: 'Turning records into clear reports.' },
-    { title: 'Business decisions', text: 'Reports guide how organizations decide.' },
+    { title: 'Records', text: 'Keeping track of where a company\'s money goes.' },
+    { title: 'Reports', text: 'Turning those records into numbers people can use.' },
   ],
-  goalLink: 'I plan to study finance, and accounting is one of its foundations.',
+  goalLink: 'I plan to study finance, and accounting is part of that.',
 };
 
 export const experienceContent = {
@@ -151,10 +149,10 @@ export const experienceContent = {
     logo: { image: 'boyertown-asd-logo', alt: 'Boyertown Area School District logo', label: 'District Logo' },
     points: [
       'Maintain and update the district website',
-      'Develop additions and improvements to existing pages',
-      'Support digital content and public-facing web resources',
+      'Make additions and improvements to existing pages',
+      'Add new content and features',
       'Work with the district communications specialist',
-      'School district serving 6,000+ students',
+      'The district serves 6,000+ students',
     ],
   },
   titration: {
@@ -175,7 +173,7 @@ export const experienceContent = {
     logo: { image: 'techowl-logo', alt: 'TechOwl logo', label: 'TechOwl Logo' },
     points: [
       'Clothing assistance multitool',
-      'Human-centered design and accessibility',
+      'Designed for people with disabilities and age-related health issues',
     ],
   },
 };
@@ -201,7 +199,7 @@ export const reflectionContent = {
       ],
     },
   ],
-  statement: 'The change was gradual. I began using AI tools to explore ideas and learn on my own.',
+  statement: 'I started using AI tools on my own and liked building with them. Now I want to see how software and finance fit together.',
 };
 
 export const futureContent = {
@@ -211,28 +209,28 @@ export const futureContent = {
       business: 'McCombs School of Business',
       apply: 'Common App · McCombs (unspecified business)',
       seal: { image: 'seal-ut-austin', label: 'UT Austin Seal', alt: 'Official seal of The University of Texas at Austin' },
-      reasons: ['Strong finance and business programs', 'Business analytics opportunities alongside finance'],
+      reasons: ['Business Analytics major', 'Financial Technology course'],
     },
     {
       university: 'Indiana University Bloomington',
       business: 'Kelley School of Business',
       apply: 'Common App or Apply IU · Kelley major',
       seal: { image: 'seal-indiana', label: 'Indiana University Seal', alt: 'Official seal of Indiana University' },
-      reasons: ['Finance education with practical career preparation', 'Investment Banking Workshop and industry connections'],
+      reasons: ['Investment Banking Workshop', 'Center for Financial Services'],
     },
     {
       university: 'The Pennsylvania State University',
       business: 'Smeal College of Business',
       apply: 'Common App or MyPennState · Smeal',
       seal: { image: 'seal-penn-state', label: 'Penn State Seal', alt: 'Official seal of The Pennsylvania State University' },
-      reasons: ['Finance program with real-world investment experience', 'Nittany Lion Fund and trading room resources'],
+      reasons: ['Nittany Lion Fund, a student-run investment fund', 'Rogers Family Trading Room'],
     },
     {
       university: 'University of Miami',
       business: 'Miami Herbert Business School',
       apply: 'Common App · Business School major',
       seal: { image: 'seal-miami', label: 'University of Miami Seal', alt: 'Official seal of the University of Miami' },
-      reasons: ["Finance education in Miami's international business environment", 'Category 5 Student Managed Investment Fund'],
+      reasons: ['Category 5 Student Managed Investment Fund', 'Direct admission to the business school'],
     },
   ],
 };

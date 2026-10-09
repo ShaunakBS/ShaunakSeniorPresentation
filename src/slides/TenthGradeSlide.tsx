@@ -15,7 +15,7 @@ export function TenthGradeSlide() {
                 <div className="my-[22px] h-px bg-line" />
                 <Label>Skill area</Label>
                 <p className="m-0 mt-1 text-[40px] font-medium">{a.skill}</p>
-                <p className="m-0 mt-2 text-[30px] text-muted">{a.note}</p>
+                {a.note && <p className="m-0 mt-2 text-[30px] text-muted">{a.note}</p>}
               </Card>
             </AnimatedSection>
           ))}

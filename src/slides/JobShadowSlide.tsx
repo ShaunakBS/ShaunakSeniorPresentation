@@ -30,7 +30,7 @@ export function JobShadowSlide() {
         </AnimatedSection>
         <div className="flex flex-col">
           <AnimatedSection delay={0.2}>
-            <Label className="mb-3">How accounting connects to finance</Label>
+            <Label className="mb-3">Accounting and finance</Label>
           </AnimatedSection>
           <div className="flex flex-col gap-[24px]">
             {jobShadowContent.generalConnection.map((g, i) => (
