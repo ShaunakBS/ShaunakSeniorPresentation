@@ -194,9 +194,9 @@ await page.goto(base + '#/slide/1'); await page.reload(); await page.waitForTime
 const tTitle = await text();
 const portrait = await page.evaluate(() => { const f = document.querySelector('.stage figure'); const r = f.getBoundingClientRect(); const st = document.querySelector('.stage').getBoundingClientRect(); const sc = st.width / 1920; return { w: r.width / sc, h: r.height / sc, left: (r.left - st.left) / sc, right: (r.right - st.left) / sc, bottom: (r.bottom - st.top) / sc, top: (r.top - st.top) / sc }; });
 check('Title: portrait is 4:5', Math.abs(portrait.w / portrait.h - 0.8) < 0.01, `${portrait.w.toFixed(0)}x${portrait.h.toFixed(0)}`);
-check('Title: portrait sits in the right ~45%', portrait.left > 1000 && portrait.right < 1900, `${portrait.left.toFixed(0)}-${portrait.right.toFixed(0)}`);
-check('Title: portrait fits vertically', portrait.top > 40 && portrait.bottom < 1040, `${portrait.top.toFixed(0)}-${portrait.bottom.toFixed(0)}`);
-check('Title: portrait has red border', await page.evaluate(() => getComputedStyle(document.querySelector('.stage figure')).borderTopColor === 'rgb(220, 38, 38)'));
+check('Title: portrait fills the right 45% edge to edge', Math.abs(portrait.left - 1056) < 2 && Math.abs(portrait.right - 1920) < 2, `${portrait.left.toFixed(0)}-${portrait.right.toFixed(0)}`);
+check('Title: portrait is full height', portrait.top < 2 && Math.abs(portrait.bottom - 1080) < 2, `${portrait.top.toFixed(0)}-${portrait.bottom.toFixed(0)}`);
+check('Title: portrait has no decorative border', await page.evaluate(() => getComputedStyle(document.querySelector('.stage figure')).borderTopWidth === '0px'));
 for (const s of ['Shaunak', 'Senior Presentation', 'Student ID: 301597', 'Homeroom: 1236'])
   check(`Title still has "${s}"`, tTitle.includes(s));
 
@@ -224,7 +224,7 @@ const later = up.indexOf('ENGINEERING', last);
 check('Reflection: later interests follow (Engineering, Software Development, Finance and AI, Entrepreneurship)', later > last && up.indexOf('SOFTWARE DEVELOPMENT') > later && up.indexOf('FINANCE AND AI') > later && up.indexOf('ENTREPRENEURSHIP') > up.indexOf('FINANCE AND AI'));
 check('Reflection: Earlier / Later phase headers', up.includes('EARLIER INTERESTS') && up.includes('LATER INTERESTS'));
 const rightEdge = await page.evaluate(() => { const st = document.querySelector('.stage').getBoundingClientRect(); const sc = st.width / 1920; return Math.max(...[...document.querySelectorAll('.stage h2, .stage p, .stage div')].filter((e) => e.children.length === 0 && e.textContent.trim()).map((e) => (e.getBoundingClientRect().right - st.left) / sc)); });
-check('Reflection: no text past the right margin', rightEdge <= 1830, rightEdge.toFixed(0));
+check('Reflection: no text past the right margin', rightEdge <= 1850, rightEdge.toFixed(0));
 
 // Future Plans seals and Common App wording
 await page.goto(base + '#/slide/11'); await page.reload(); await page.waitForTimeout(1200);
@@ -271,12 +271,12 @@ const aboutText = await text();
 check('About Me: captions Personal, Family, Friends, TSA', ['Personal', 'Family', 'Friends', 'TSA'].every((c) => aboutText.includes(c)));
 check('About Me: four photos share one frame size', new Set(aboutImgs.map((i) => `${Math.round(i.w)}x${Math.round(i.h)}`)).size === 1);
 await expectImgs(4, ['seal-toronto'], { 'seal-toronto': 'contain' });
-check('Ninth Grade: seal sits in College Essay card', await page.evaluate(() => { const card = [...document.querySelectorAll('.stage h2')].find((h) => h.textContent.includes('University of Toronto')); return !!card && !!card.parentElement.querySelector('img'); }));
+check('Ninth Grade: seal sits in the College essay section', await page.evaluate(() => { const sec = document.querySelector('[data-section="college-essay"]'); return !!sec && !!sec.querySelector('img'); }));
 await expectImgs(6, ['silvias-gymnastics-logo'], { 'silvias-gymnastics-logo': 'contain' });
 await expectImgs(8, ['infovision-logo'], { 'infovision-logo': 'contain' });
 await expectImgs(9, ['boyertown-asd-logo', 'titration-system'], { 'boyertown-asd-logo': 'contain', 'titration-system': 'contain' });
 const futImgs = await expectImgs(11, ['seal-ut-austin', 'seal-indiana', 'seal-penn-state', 'seal-miami'], { 'seal-ut-austin': 'contain', 'seal-indiana': 'contain', 'seal-penn-state': 'contain', 'seal-miami': 'contain' });
-const sealByCard = await page.evaluate(() => [...document.querySelectorAll('.stage h2')].map((h) => ({ uni: h.textContent, seal: h.closest('div').parentElement.querySelector('img')?.currentSrc.split('/').pop() })));
+const sealByCard = await page.evaluate(() => [...document.querySelectorAll('.stage h2')].map((h) => ({ uni: h.textContent, seal: h.closest('[data-school]').querySelector('img')?.currentSrc.split('/').pop() })));
 const want = { 'The University of Texas at Austin': 'seal-ut-austin', 'Indiana University Bloomington': 'seal-indiana', 'The Pennsylvania State University': 'seal-penn-state', 'University of Miami': 'seal-miami' };
 for (const [uni, f] of Object.entries(want)) check(`Future Plans: ${uni} uses ${f}`, (sealByCard.find((c) => c.uni === uni)?.seal || '').startsWith(f), JSON.stringify(sealByCard.find((c) => c.uni === uni)));
 check('Future Plans: seals are the same size', new Set(futImgs.map((i) => `${Math.round(i.w)}x${Math.round(i.h)}`)).size === 1);

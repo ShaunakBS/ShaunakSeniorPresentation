@@ -35,12 +35,12 @@ export function ResumeViewer({ image, className = '' }: Props) {
         <img
           src={src}
           alt="Shaunak's current resume: experience, engineering projects, awards, skills, and goals"
-          className="absolute inset-0 h-full w-full rounded-[6px] border border-line bg-white object-contain object-top shadow-card"
+          className="absolute inset-0 h-full w-full rounded-[4px] bg-white object-contain object-top"
         />
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="no-print absolute bottom-4 right-4 flex items-center gap-2 rounded-[6px] bg-accent px-5 py-3 text-[20px] font-medium text-white shadow-card hover:bg-accent-hover"
+          className="no-print absolute bottom-4 right-4 flex items-center gap-2 rounded-[4px] bg-accent px-5 py-3 text-[20px] font-medium text-white hover:bg-accent-hover"
         >
           <Maximize2 size={20} aria-hidden /> Expand resume
         </button>

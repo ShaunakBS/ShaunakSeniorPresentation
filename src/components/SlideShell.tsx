@@ -4,37 +4,34 @@ import { student } from '../data/presentation';
 
 interface Props {
   title: string;
+  /** Optional context line, set in muted gray at the right of the heading. */
   subtitle?: string;
   children: ReactNode;
   className?: string;
 }
 
-/** Common slide frame: heading row, thin divider, content area, discreet footer. Sized for the 1920x1080 stage. */
+/**
+ * Common slide frame for the 1920x1080 stage: 72px side margins, heading with one hairline, content area, small footer.
+ * Content area is 1776 px wide and about 830 px tall.
+ */
 export function SlideShell({ title, subtitle, children, className = '' }: Props) {
   return (
-    <section className="absolute inset-0 flex flex-col px-[96px] pb-[72px] pt-[60px]" aria-label={title}>
-      <header className="flex items-end justify-between border-b border-line pb-[16px]">
-        <AnimatedSection y={10}>
-          <h1 className="m-0 font-serif text-[76px] font-medium leading-[1] tracking-[-0.015em] text-ink">{title}</h1>
+    <section className="absolute inset-0 flex flex-col px-[72px] pb-[76px] pt-[44px]" aria-label={title}>
+      <header className="flex items-baseline justify-between border-b border-line pb-[18px]">
+        <AnimatedSection y={8}>
+          <h1 className="t-title m-0 text-ink">{title}</h1>
         </AnimatedSection>
-        {subtitle && (
-          <AnimatedSection delay={0.1} y={8}>
-            <p className="m-0 pb-[6px] text-[28px] font-medium text-accent-hover">{subtitle}</p>
-          </AnimatedSection>
-        )}
+        {subtitle && <p className="m-0 text-[32px] text-muted">{subtitle}</p>}
       </header>
       <div className={`min-h-0 flex-1 pt-[28px] ${className}`}>{children}</div>
-      <footer className="absolute bottom-[26px] left-[96px] right-[96px] flex justify-between text-[17px] tracking-wide text-muted">
+      <footer className="absolute bottom-[26px] left-[72px] right-[72px] text-[18px] text-muted">
         <span>{student.name}</span>
       </footer>
     </section>
   );
 }
 
-export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-[6px] border border-line bg-surface shadow-card ${className}`}>{children}</div>;
-}
-
+/** Small gray label, sentence case. */
 export function Label({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`label ${className}`}>{children}</div>;
+  return <p className={`label m-0 ${className}`}>{children}</p>;
 }

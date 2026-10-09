@@ -2,11 +2,11 @@
 :root {
   --bg: 8 8 8;            /* #080808 primary background */
   --bg2: 20 20 20;        /* #141414 secondary background */
-  --card: 28 28 28;       /* #1C1C1C card background */
+  --card: 28 28 28;       /* #1C1C1C panel background (used sparingly) */
   --red: 220 38 38;       /* #DC2626 primary red */
   --red-dark: 153 27 27;  /* #991B1B */
   --red-hover: 239 68 68; /* #EF4444 */
   --text: 255 255 255;    /* #FFFFFF */
-  --text2: 212 212 212;   /* #D4D4D4 */
+  --text2: 168 168 168;   /* #A8A8A8 muted gray for secondary text */
   --border: 51 51 51;     /* #333333 */
 }

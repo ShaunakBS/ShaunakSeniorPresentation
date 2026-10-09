@@ -15,7 +15,19 @@ button { font: inherit; }
 :focus-visible { outline: 3px solid rgb(var(--red-hover)); outline-offset: 3px; border-radius: 4px; }
 
 .stage { width: 1920px; height: 1080px; position: absolute; transform-origin: top left; overflow: hidden; background: rgb(var(--bg)); }
-.label { font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: rgb(var(--red-hover)); }
+
+/* ---------- Type scale and spacing: every slide uses these roles, nothing ad hoc ----------
+   Spacing scale (px): 8 / 16 / 24 / 32 / 48 / 64 / 96. Page margin 96. Gutter 64. */
+@layer components {
+  .t-title { @apply font-serif font-medium; font-size: 72px; line-height: 1; letter-spacing: -0.015em; }
+  .t-h2    { @apply font-serif font-medium; font-size: 46px; line-height: 1.12; }
+  .t-h3    { @apply font-serif font-medium; font-size: 36px; line-height: 1.2; }
+  .t-body  { font-size: 36px; line-height: 1.3; }
+  .t-sm    { font-size: 30px; line-height: 1.3; }
+  .t-meta  { font-size: 24px; line-height: 1.35; color: rgb(var(--text2)); }
+  .rule    { border-top: 1px solid rgb(var(--border)); }
+  .label   { font-size: 24px; line-height: 1.35; font-weight: 500; color: rgb(var(--text2)); }
+}
 
 /* ---------- Print / PDF: one 1920x1080 slide per page, no controls ---------- */
 @page { size: 1920px 1080px; margin: 0; }

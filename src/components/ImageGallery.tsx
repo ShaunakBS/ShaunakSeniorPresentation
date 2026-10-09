@@ -21,7 +21,7 @@ export interface SlotProps {
 export function ImageSlot({ name, alt, label, fit = 'cover', position = 'center', matte = false, caption, className = '' }: SlotProps) {
   const src = getImage(name);
   return (
-    <figure className={`relative m-0 overflow-hidden rounded-[6px] border border-line ${src && matte ? 'bg-white p-[10px]' : 'bg-accent-light'} ${className}`}>
+    <figure className={`relative m-0 overflow-hidden rounded-[4px] ${src ? (matte ? 'bg-white p-[12px]' : '') : 'border border-line bg-accent-light'} ${className}`}>
       {src ? (
         <img
           src={src}
@@ -31,12 +31,11 @@ export function ImageSlot({ name, alt, label, fit = 'cover', position = 'center'
         />
       ) : (
         <div role="img" aria-label={`${alt} (photo placeholder)`} className="flex h-full w-full flex-col items-center justify-center gap-4 px-4 text-center">
-          <span className="h-[2px] w-[36px] bg-accent" aria-hidden />
-          <span className="text-[24px] font-medium leading-tight text-white">{label ?? alt}</span>
+          <span className="text-[24px] leading-tight text-muted">{label ?? alt}</span>
         </div>
       )}
       {src && caption && (
-        <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-8 text-[21px] font-medium text-white">{caption}</figcaption>
+        <figcaption className="absolute inset-x-0 bottom-0 bg-black/70 px-4 py-2 text-[21px] text-white">{caption}</figcaption>
       )}
     </figure>
   );
