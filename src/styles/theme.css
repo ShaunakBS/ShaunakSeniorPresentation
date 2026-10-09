@@ -1,0 +1,12 @@
+/* Single source of truth for the red / black / white theme. Values are space-separated RGB channels. */
+:root {
+  --bg: 8 8 8;            /* #080808 primary background */
+  --bg2: 20 20 20;        /* #141414 secondary background */
+  --card: 28 28 28;       /* #1C1C1C card background */
+  --red: 220 38 38;       /* #DC2626 primary red */
+  --red-dark: 153 27 27;  /* #991B1B */
+  --red-hover: 239 68 68; /* #EF4444 */
+  --text: 255 255 255;    /* #FFFFFF */
+  --text2: 212 212 212;   /* #D4D4D4 */
+  --border: 51 51 51;     /* #333333 */
+}
