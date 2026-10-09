@@ -56,8 +56,8 @@ export const speakerNotes: SpeakerNote[] = [
     id: 'tenth',
     seconds: 30,
     paragraphs: [
-      "In tenth grade, the Smart Futures activities were Using Email and Create a Personal Budget.",
-      "The budget connects to finance, which is what I want to study. [CONFIRM: a real example of using email professionally, or skip it.]",
+      "In tenth grade, I worked on Smart Futures skills: basic computer skills, internet basics, and using email. I earned all three Northstar certificates, with scores of 86, 94, and 97 percent.",
+      "[CONFIRM: one real example of using email professionally, like writing to a teacher or the district, or skip it.]",
     ],
   },
   {
@@ -74,7 +74,7 @@ export const speakerNotes: SpeakerNote[] = [
     id: 'everfi',
     seconds: 40,
     paragraphs: [
-      "In eleventh grade we did EverFi Financial Literacy. The topics were taxes, savings accounts, and checking accounts.",
+      "In eleventh grade we did EverFi Financial Literacy, and I earned the certificate of completion in October 2025. The topics were taxes, savings accounts, and checking accounts.",
       "Taxes were definitely not my favorite part, but I'm glad we covered them. I want to study finance, so it was worth knowing.",
       "[CONFIRM: one thing you learned, like a fact about taxes or accounts that surprised you.]",
     ],

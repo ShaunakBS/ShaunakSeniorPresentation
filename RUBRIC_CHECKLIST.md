@@ -22,7 +22,7 @@ Goal: 36/36. Passing is 27 or higher. Items marked **Delivery** depend on how yo
 |-----------|-------|
 | Resume | 3 (also summarized on 2, About Me) |
 | College essay | 4 (Ninth Grade) |
-| Smart Futures activities and skills | 4 (ninth grade: Think Like an Entrepreneur, Dive Into Career Clusters) and 5 (tenth grade: Using Email, Create a Personal Budget) |
+| Smart Futures activities and skills | 4 (ninth grade: Think Like an Entrepreneur, Dive Into Career Clusters) and 5 (tenth grade skills: Basic Computer Skills, Internet Basics, Using Email, with the Northstar certificates) |
 | EverFi | 7 (Eleventh Grade) |
 | Job shadow | 8 |
 | Service learning project | 6 |

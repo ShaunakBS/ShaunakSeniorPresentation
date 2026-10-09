@@ -25,6 +25,8 @@ const jobs = [
   { from: 'Experiences/SAPT Image.png', to: 'titration-system.webp', kind: 'diagram', max: 1200 },
   { from: 'Experiences/Boyertown ASD logo.png', to: 'boyertown-asd-logo.png', kind: 'copy' },
   { from: 'Experiences/TechOwl Logo.png', to: 'techowl-logo.png', kind: 'logo', max: 600, trim: 'white' },
+  { from: 'Smart Futures Skills.png', to: 'smart-futures-skills.png', kind: 'copy' },
+  { from: 'EverFi Certificate.png', to: 'everfi-certificate.png', kind: 'copy' },
   { from: 'InfoVision Logo.jpg', to: 'infovision-logo.png', kind: 'logo', max: 900, trim: 'white' },
   { from: 'silvias.jpg', to: 'silvias-gymnastics-logo.jpg', kind: 'copy' },
   { from: 'school seals/U of T seal.jpg', to: 'seal-toronto.jpg', kind: 'copy' },

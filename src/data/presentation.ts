@@ -91,11 +91,14 @@ export const ninthContent = {
 };
 
 export const tenthContent = {
-  activities: [
-    { name: 'Using Email', skill: 'Professional communication', note: '' },
-    { name: 'Create a Personal Budget', skill: 'Financial planning', note: '' },
-  ],
-  connection: 'Both come up in business and finance.',
+  heading: 'Internet, computer, and email skills',
+  // Names as shown on the Northstar Digital Literacy certificates in the screenshot.
+  skills: ['Basic Computer Skills', 'Internet Basics', 'Using Email'],
+  image: {
+    image: 'smart-futures-skills',
+    alt: 'Northstar Digital Literacy certificates awarded to Shaunak Bangalore Shashikanth for Basic Computer Skills, Internet Basics, and Using Email',
+    label: 'Smart Futures skill certificates',
+  },
 };
 
 export const serviceContent = {
@@ -128,6 +131,11 @@ export const everfiContent = {
     { name: 'Checking accounts', note: '' },
   ],
   why: 'I want to study finance, so these are worth knowing.',
+  certificate: {
+    image: 'everfi-certificate',
+    alt: 'EVERFI Financial Literacy for High School certificate of completion awarded to Shaunak Bangalore Shashikanth, October 17, 2025',
+    label: 'EverFi certificate',
+  },
 };
 
 export const jobShadowContent = {

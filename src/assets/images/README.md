@@ -12,6 +12,8 @@ The site finds each image by file name (any of .jpg, .jpeg, .png, .webp, .svg, .
 | `about-friends.jpg` | `About me Images/Friends.jpeg` | 2 About Me, "Friends" |
 | `about-tsa.jpg` | `About me Images/TSA.jpeg` | 2 About Me, "TSA" |
 | `seal-toronto.jpg` | `school seals/U of T seal.jpg` | 4 Ninth Grade, College Essay |
+| `smart-futures-skills.png` | `Smart Futures Skills.png` | 5 Tenth Grade (Northstar skill certificates) |
+| `everfi-certificate.png` | `EverFi Certificate.png` | 7 Eleventh Grade (EverFi certificate) |
 | `silvias-gymnastics-logo.jpg` | `silvias.jpg` | 6 Service Learning |
 | `infovision-logo.png` | `InfoVision Logo.jpg` (blank margin trimmed) | 8 Job Shadow |
 | `boyertown-asd-logo.png` | `Experiences/Boyertown ASD logo.png` | 9 Experience (district internship) |
